@@ -1,4 +1,3 @@
 export interface Addresses {
-    EXCHANGE: string;
-  }
-  
+  EXCHANGE: string;
+}

@@ -1,4 +1,4 @@
-import { BigNumberish, BytesLike } from "ethers";
+import { BigNumberish, BytesLike } from 'ethers';
 
 /**
  * Do not update unless the contract has been updated
