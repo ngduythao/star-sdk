@@ -1,7 +1,7 @@
 import { providers } from 'ethers';
 import { SupportedChainId, SellerOrder, PermitName, TypeName } from '../types';
 import { etherSignTypedData } from './etherSignTypedData';
-import { generateTypedData } from './generateTypedData';
+import { getTypeAndDomain } from './getTypeAndDomain';
 
 /**
  * Create a signature for a maker order
@@ -20,7 +20,7 @@ export const signSellerOrder = async (
   verifyingContractAddress?: string,
 ): Promise<string> => {
   const signerAddress = await signer.getAddress();
-  const { domain, type } = generateTypedData(
+  const { domain, type } = getTypeAndDomain(
     chainId,
     TypeName.SELLER_ORDER,
     contractName,

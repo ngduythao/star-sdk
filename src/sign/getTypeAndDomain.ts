@@ -2,7 +2,7 @@ import {
   TypedDataDomain,
   TypedDataField,
 } from '@ethersproject/abstract-signer';
-import { SupportedChainId, TypeName } from '../types';
+import { SupportedChainId, PermitName, TypeName } from '../types';
 import { typedByName } from '../constants';
 
 const version = 1;
@@ -19,7 +19,7 @@ const version = 1;
 export const getTypeAndDomain = (
   chainId: SupportedChainId,
   typeName: TypeName,
-  contractName?: string,
+  contractName?: PermitName,
   verifyingContract?: string,
 ): {
   type: Record<string, TypedDataField[]>;

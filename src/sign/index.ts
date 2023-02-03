@@ -1,2 +1,2 @@
 export { signSellerOrder } from './signSellerOrder';
-export { generateTypedData } from './generateTypedData';
+export { getTypeAndDomain } from './getTypeAndDomain';

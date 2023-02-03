@@ -37,14 +37,15 @@ export const etherSignTypedData = async (
   address: string,
   domain: TypedDataDomain,
   types: Record<string, Array<TypedDataField>>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value: Record<string, any>,
 ): Promise<string> => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   const populated = await _TypedDataEncoder.resolveNames(
     domain,
     types,
     value,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     (name: string) => {
       return provider.resolveName(name);
     },
